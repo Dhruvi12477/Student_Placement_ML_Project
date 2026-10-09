@@ -1,0 +1,27 @@
+{
+    "model_name": "Logistic Regression",
+    "features": [
+        "gender",
+        "age",
+        "degree",
+        "branch",
+        "cgpa",
+        "backlogs",
+        "internships",
+        "certifications",
+        "coding_skills",
+        "communication_skills",
+        "aptitude_score",
+        "projects"
+    ],
+    "target": "placed",
+    "train_size": 160,
+    "test_size": 40,
+    "test_metrics": {
+        "Accuracy": 0.75,
+        "Precision": 0.7777777777777778,
+        "Recall": 0.84,
+        "F1-Score": 0.8076923076923077,
+        "ROC-AUC": 0.8026666666666666
+    }
+}

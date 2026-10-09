@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Felix-It AI | Placement Readiness</title>
+
+  <meta
+    name="description"
+    content="AI-powered student placement readiness assessment."
+  >
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+  >
+</head>
+
+<body>
+
+  <div class="page-shell">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+      <a class="brand" href="/">
+
+        <span class="brand-mark">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+        <span>
+
+          <strong>
+            Felix-It<span> AI</span>
+          </strong>
+
+          <small>
+            AI Placement &amp; Career Readiness
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <div class="header-actions">
+
+        <span class="secure-badge">
+          <i></i>
+          AI readiness assessment
+        </span>
+
+        <button
+          class="header-help"
+          type="button"
+          id="topHelp"
+        >
+          How it works
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+      <div class="assessment-layout">
+
+
+        <!-- =================================================
+             LEFT: ASSESSMENT NAVIGATION
+             ================================================= -->
+
+        <aside class="progress-rail">
+
+          <div class="rail-title">
+            Assessment
+          </div>
+
+
+          <button
+            class="rail-step active"
+            data-target="section-1"
+            type="button"
+          >
+
+            <span>01</span>
+
+            <div>
+              <b>Personal profile</b>
+              <small>Who you are</small>
+            </div>
+
+          </button>
+
+
+          <button
+            class="rail-step"
+            data-target="section-2"
+            type="button"
+          >
+
+            <span>02</span>
+
+            <div>
+              <b>Learning &amp; experience</b>
+              <small>Your exposure</small>
+            </div>
+
+          </button>
+
+
+          <button
+            class="rail-step"
+            data-target="section-3"
+            type="button"
+          >
+
+            <span>03</span>
+
+            <div>
+              <b>Communication</b>
+              <small>How you communicate</small>
+            </div>
+
+          </button>
+
+
+          <button
+            class="rail-step"
+            data-target="section-4"
+            type="button"
+          >
+
+            <span>04</span>
+
+            <div>
+              <b>Technical skills</b>
+              <small>What you can build</small>
+            </div>
+
+          </button>
+
+
+          <button
+            class="rail-step"
+            data-target="section-5"
+            type="button"
+          >
+
+            <span>05</span>
+
+            <div>
+              <b>Practical projects</b>
+              <small>What you've made</small>
+            </div>
+
+          </button>
+
+
+          <div class="rail-note">
+
+            <span>✦</span>
+
+            <div>
+
+              <b>
+                Small steps, useful signal.
+              </b>
+
+              <p>
+                Your answers are used to estimate readiness,
+                not to guarantee employment.
+              </p>
+
+            </div>
+
+          </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CENTER: ASSESSMENT FORM
+             ================================================= -->
+
+        <form
+          id="assessmentForm"
+          class="assessment-card"
+          novalidate
+        >
+
+
+          <!-- =================================================
+               SECTION 1: PERSONAL PROFILE
+               ================================================= -->
+
+          <section
+            class="form-section"
+            id="section-1"
+          >
+
+            <div class="section-heading">
+
+              <span class="section-number">
+                01
+              </span>
+
+              <div>
+
+                <h2>
+                  Personal profile
+                </h2>
+
+                <p>
+                  Start with a few basics about your academic profile.
+                </p>
+
+              </div>
+
+              <span class="section-count">
+                1 / 5
+              </span>
+
+            </div>
+
+
+            <div class="field-grid two">
+
+
+              <!-- NAME -->
+
+              <label class="field">
+
+                <span>
+                  Name
+                </span>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="e.g. Dhruvi Kathiriya"
+                  autocomplete="name"
+                >
+
+              </label>
+
+
+
+              <!-- AGE -->
+
+              <label class="field">
+
+                <span>
+                  Age
+                  <small>15–35</small>
+                </span>
+
+                <input
+                  id="age"
+                  name="age"
+                  type="number"
+                  min="15"
+                  max="35"
+                  placeholder="e.g. 21"
+                  required
+                >
+
+              </label>
+
+
+
+              <!-- GENDER -->
+
+              <label class="field">
+
+                <span>
+                  Gender
+                </span>
+
+                <select
+                  id="gender"
+                  name="gender"
+                  required
+                >
+
+                  <option value="">
+                    Select gender
+                  </option>
+
+                </select>
+
+              </label>
+
+
+
+              <!-- DEGREE -->
+
+              <label class="field">
+
+                <span>
+                  Degree
+                </span>
+
+                <select
+                  id="degree"
+                  name="degree"
+                  required
+                >
+
+                  <option value="">
+                    Select education level
+                  </option>
+
+                </select>
+
+              </label>
+
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               SECTION 2: LEARNING & EXPERIENCE
+               ================================================= -->
+
+          <section
+            class="form-section"
+            id="section-2"
+          >
+
+            <div class="section-heading">
+
+              <span class="section-number">
+                02
+              </span>
+
+              <div>
+
+                <h2>
+                  Learning &amp; experience
+                </h2>
+
+                <p>
+                  Your practical exposure and learning consistency.
+                </p>
+
+              </div>
+
+              <span class="section-count">
+                2 / 5
+              </span>
+
+            </div>
+
+
+            <div class="metric-grid">
+
+
+              <!-- INTERNSHIPS -->
+
+              <label class="metric-field">
+
+                <span>
+                  Internships
+                  <small>Recommended: 1+</small>
+                </span>
+
+                <input
+                  id="internships"
+                  name="internships"
+                  type="number"
+                  min="0"
+                  placeholder="0"
+                >
+
+                <small>
+                  Optional, but 1+ gives a positive experience signal.
+                </small>
+
+              </label>
+
+
+
+              <!-- TOTAL PROJECTS -->
+
+              <label class="metric-field">
+
+                <span>
+                  Projects completed
+                  <small>Target: 15+</small>
+                </span>
+
+                <input
+                  id="projects"
+                  name="projects"
+                  type="number"
+                  min="0"
+                  placeholder="e.g. 15"
+                  required
+                >
+
+                <small>
+                  Academic + personal + automation projects.
+                </small>
+
+              </label>
+
+
+
+              <!-- CERTIFICATIONS -->
+
+              <label class="metric-field">
+
+                <span>
+                  Certifications
+                  <small>Target: 10+</small>
+                </span>
+
+                <input
+                  id="certifications"
+                  name="certifications"
+                  type="number"
+                  min="0"
+                  placeholder="e.g. 10"
+                  required
+                >
+
+                <small>
+                  Relevant technical and AI certifications.
+                </small>
+
+              </label>
+
+
+
+              <!-- DAILY STUDY -->
+
+              <label class="metric-field">
+
+                <span>
+                  Daily study
+                  <small>Target: 4+ hrs</small>
+                </span>
+
+                <input
+                  id="daily_hours"
+                  name="daily_hours"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.5"
+                  placeholder="e.g. 4"
+                  required
+                >
+
+                <small>
+                  Average focused learning hours per day.
+                </small>
+
+              </label>
+
+
+            </div>
+
+
+          </section>
+
+
+
+          <!-- =================================================
+               SECTION 3: ENGLISH COMMUNICATION
+               ================================================= -->
+
+          <section
+            class="form-section"
+            id="section-3"
+          >
+
+            <div class="section-heading">
+
+              <span class="section-number">
+                03
+              </span>
+
+              <div>
+
+                <h2>
+                  English communication
+                </h2>
+
+                <p>
+                  Communication is an important part of placement
+                  and client-facing roles.
+                </p>
+
+              </div>
+
+              <span class="section-count">
+                3 / 5
+              </span>
+
+            </div>
+
+
+            <div
+              class="choice-stack"
+              id="communicationChoices"
+            >
+
+
+              <!-- BEGINNER -->
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="communication_level"
+                  value="1"
+                >
+
+                <span class="choice-radio"></span>
+
+                <span>
+
+                  <b>
+                    Beginner
+                  </b>
+
+                  <small>
+                    Thodi English Aati Hai 😅
+                  </small>
+
+                </span>
+
+              </label>
+
+
+
+              <!-- INTERMEDIATE -->
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="communication_level"
+                  value="4"
+                >
+
+                <span class="choice-radio"></span>
+
+                <span>
+
+                  <b>
+                    Intermediate
+                  </b>
+
+                  <small>
+                    English Chal Jaati Hai 😎
+                  </small>
+
+                </span>
+
+              </label>
+
+
+
+              <!-- PRETTY GOOD -->
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="communication_level"
+                  value="6"
+                >
+
+                <span class="choice-radio"></span>
+
+                <span>
+
+                  <b>
+                    Pretty Good! 💪
+                  </b>
+
+                  <small>
+                    English Achhi Hai 💪
+                  </small>
+
+                </span>
+
+              </label>
+
+
+
+              <!-- FULL CONFIDENCE -->
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="communication_level"
+                  value="8"
+                >
+
+                <span class="choice-radio"></span>
+
+                <span>
+
+                  <b>
+                    Full Confidence 🗣️
+                  </b>
+
+                  <small>
+                    English Mein Full Confidence 🔥
+                  </small>
+
+                </span>
+
+              </label>
+
+
+
+              <!-- PRO MAX -->
+
+              <label class="choice">
+
+                <input
+                  type="radio"
+                  name="communication_level"
+                  value="10"
+                >
+
+                <span class="choice-radio"></span>
+
+                <span>
+
+                  <b>
+                    English Pro Max 🚀
+                  </b>
+
+                  <small>
+                    Confident, clear &amp; professional communication.
+                  </small>
+
+                </span>
+
+              </label>
+
+
+            </div>
+
+
+            <!-- Hidden value sent to backend -->
+
+            <input
+              type="hidden"
+              id="communication_skills"
+              name="communication_skills"
+            >
+
+
+          </section>
+
+
+
+          <!-- =================================================
+               SECTION 4: TECHNICAL & AI SKILLS
+               ================================================= -->
+
+          <section
+            class="form-section"
+            id="section-4"
+          >
+
+
+            <div class="section-heading">
+
+              <span class="section-number">
+                04
+              </span>
+
+              <div>
+
+                <h2>
+                  Technical &amp; AI skills
+                </h2>
+
+                <p>
+                  Select the skills you genuinely know.
+                  These skills are important for 75%+ readiness.
+                </p>
+
+              </div>
+
+              <span class="section-count">
+                4 / 5
+              </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROGRAMMING & WEB
+                 ================================================= -->
+
+            <div class="skill-panel featured-skills">
+
+              <div class="panel-label">
+
+                <span>
+                  01
+                </span>
+
+                <div>
+
+                  <b>
+                    Programming &amp; Web
+                  </b>
+
+                  <small>
+                    Required core development skills
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div
+                class="skill-pills"
+                data-skill-group="programming"
+              >
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="HTML"
+                >
+                  HTML
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="CSS"
+                >
+                  CSS
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Bootstrap"
+                >
+                  Bootstrap
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="JavaScript"
+                >
+                  JavaScript
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Python"
+                >
+                  Python
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="JSON"
+                >
+                  JSON
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PYTHON LEVEL
+                 ================================================= -->
+
+            <div class="skill-panel">
+
+              <div class="panel-label">
+
+                <span>
+                  02
+                </span>
+
+                <div>
+
+                  <b>
+                    Python level
+                  </b>
+
+                  <small>
+                    Advanced or Pro is required for 75%+ readiness.
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div class="level-grid">
+
+
+                <!-- BEGINNER -->
+
+                <label class="level-option">
+
+                  <input
+                    type="radio"
+                    name="python_level"
+                    value="Beginner"
+                  >
+
+                  <span>
+
+                    <b>
+                      Beginner
+                    </b>
+
+                    <small>
+                      Learning the basics
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+
+                <!-- INTERMEDIATE -->
+
+                <label class="level-option">
+
+                  <input
+                    type="radio"
+                    name="python_level"
+                    value="Intermediate"
+                  >
+
+                  <span>
+
+                    <b>
+                      Intermediate
+                    </b>
+
+                    <small>
+                      Can build small projects
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+
+                <!-- ADVANCED -->
+
+                <label class="level-option">
+
+                  <input
+                    type="radio"
+                    name="python_level"
+                    value="Advanced"
+                  >
+
+                  <span>
+
+                    <b>
+                      Advanced
+                    </b>
+
+                    <small>
+                      Required for strong readiness
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+
+                <!-- PRO -->
+
+                <label class="level-option">
+
+                  <input
+                    type="radio"
+                    name="python_level"
+                    value="Pro"
+                  >
+
+                  <span>
+
+                    <b>
+                      Pro
+                    </b>
+
+                    <small>
+                      Production-ready confidence
+                    </small>
+
+                  </span>
+
+                </label>
+
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROGRAMMING FUNDAMENTALS
+                 ================================================= -->
+
+            <div class="skill-panel">
+
+              <div class="panel-label">
+
+                <span>
+                  03
+                </span>
+
+                <div>
+
+                  <b>
+                    Programming fundamentals
+                  </b>
+
+                  <small>
+                    Logic and problem-solving foundation.
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div
+                class="skill-pills"
+                data-skill-group="fundamentals"
+              >
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Logic Building"
+                >
+                  Logic Building
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="OOPs"
+                >
+                  OOPs
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="DSA"
+                >
+                  DSA
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Deployment"
+                >
+                  Deployment
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 AI & AUTOMATION
+                 ================================================= -->
+
+            <div class="skill-panel">
+
+              <div class="panel-label">
+
+                <span>
+                  04
+                </span>
+
+                <div>
+
+                  <b>
+                    AI &amp; Automation
+                  </b>
+
+                  <small>
+                    Required AI agent and automation skills.
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div
+                class="skill-pills"
+                data-skill-group="ai"
+              >
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="LLMs"
+                >
+                  LLMs
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Prompt Engineering"
+                >
+                  Prompt Engineering
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="LangChain"
+                >
+                  LangChain
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="LangGraph"
+                >
+                  LangGraph
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="RAG"
+                >
+                  RAG
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="n8n"
+                >
+                  n8n
+                </button>
+
+
+                <button
+                  type="button"
+                  class="skill-pill"
+                  data-skill="Make/Zapier"
+                >
+                  Make/Zapier
+                </button>
+
+
+              </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ADDITIONAL TECH & EXPOSURE
+                 ================================================= -->
+
+            <div class="skill-panel additional-tech">
+
+              <div class="panel-label">
+
+                <span>
+                  05
+                </span>
+
+                <div>
+
+                  <b>
+                    Additional Tech &amp; Exposure
+                  </b>
+
+                  <small>
+                    Practical AI experience targets.
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div class="additional-inputs">
+
+
+                <!-- AI AGENTS -->
+
+                <div class="tech-input-group">
+
+                  <label for="ai_agents">
+
+                    AI Agents
+
+                    <small>
+                      Target: 50+
+                    </small>
+
+                  </label>
+
+                  <input
+                    type="number"
+                    id="ai_agents"
+                    name="ai_agents"
+                    min="0"
+                    step="1"
+                    value="0"
+                    placeholder="e.g. 50"
+                  >
+
+                </div>
+
+
+
+                <!-- AI PROJECTS -->
+
+                <div class="tech-input-group">
+
+                  <label for="additional_projects">
+
+                    AI / Automation Projects
+
+                    <small>
+                      Target: 5+
+                    </small>
+
+                  </label>
+
+                  <input
+                    type="number"
+                    id="additional_projects"
+                    name="additional_projects"
+                    min="0"
+                    step="1"
+                    value="0"
+                    placeholder="e.g. 5"
+                  >
+
+                </div>
+
+
+
+                <!-- AI TOOLS -->
+
+                <div class="tech-input-group">
+
+                  <label for="ai_tools">
+
+                    AI Tools
+
+                    <small>
+                      Target: 50+
+                    </small>
+
+                  </label>
+
+                  <input
+                    type="number"
+                    id="ai_tools"
+                    name="ai_tools"
+                    min="0"
+                    step="1"
+                    value="0"
+                    placeholder="e.g. 50"
+                  >
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+            <!-- Hidden fields -->
+
+            <input
+              type="hidden"
+              id="coding_skills"
+              name="coding_skills"
+              value="5"
+            >
+
+
+            <input
+              type="hidden"
+              id="technical_skills"
+              name="technical_skills"
+            >
+
+
+            <div class="skill-scale">
+
+              <span>
+                Technical requirements
+              </span>
+
+              <b id="skillCount">
+                0
+              </b>
+
+              <small>
+                Select the skills you genuinely know.
+              </small>
+
+            </div>
+
+
+          </section>
+
+
+
+          <!-- =================================================
+               SECTION 5: PRACTICAL PROJECTS
+               ================================================= -->
+
+          <section
+            class="form-section"
+            id="section-5"
+          >
+
+            <div class="section-heading">
+
+              <span class="section-number">
+                05
+              </span>
+
+              <div>
+
+                <h2>
+                  Practical projects
+                </h2>
+
+                <p>
+                  Show us what you have actually built.
+                  Practical work matters.
+                </p>
+
+              </div>
+
+              <span class="section-count">
+                5 / 5
+              </span>
+
+            </div>
+
+
+
+            <label class="field textarea-field">
+
+              <span>
+
+                Tell us about your AI / automation /
+                development projects
+
+                <small>
+                  optional
+                </small>
+
+              </span>
+
+
+              <textarea
+                id="project_details"
+                name="project_details"
+                placeholder="Example: AI chatbot using n8n, WhatsApp automation, automated email system, invoice analyzer, RAG chatbot, lead automation..."
+              ></textarea>
+
+            </label>
+
+
+
+            <!-- =================================================
+                 REQUIREMENT INFORMATION
+                 ================================================= -->
+
+
+               
+
+
+            <!-- ERROR -->
+
+            <div
+              id="errorBox"
+              class="error-box"
+              hidden
+            ></div>
+
+
+
+            <!-- SUBMIT -->
+
+            <div class="submit-row">
+
+              <button
+                type="button"
+                class="btn outline"
+                id="sampleBtn"
+              >
+                Load sample
+              </button>
+
+
+              <button
+                type="submit"
+                class="btn primary"
+                id="submitBtn"
+              >
+
+                <span>
+                  Check my AI job readiness
+                </span>
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </button>
+
+            </div>
+
+
+
+            <p class="disclaimer">
+
+              Your result is an AI/ML-based readiness estimate.
+              It is not a guarantee of employment.
+
+            </p>
+
+          </section>
+
+
+        </form>
+
+
+
+        <!-- =================================================
+             RIGHT: AI RESULT PANEL
+             ================================================= -->
+
+        <aside
+          id="resultSection"
+          class="result-section"
+          hidden
+        >
+
+          <div class="result-panel">
+
+
+            <!-- RESULT HEADER -->
+
+            <div class="result-panel-header">
+
+              <div>
+
+                <span class="eyebrow">
+                  ✦ AI RESULT
+                </span>
+
+                <h2>
+                  Job Readiness
+                </h2>
+
+                <p id="resultTimestamp"></p>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="result-edit-btn"
+                id="editBtn"
+              >
+                Edit
+              </button>
+
+            </div>
+
+
+
+            <!-- SCORE -->
+
+            <div class="score-card">
+
+              <div
+                class="score-ring"
+                id="scoreRing"
+              >
+
+                <div>
+
+                  <strong id="placedScore">
+                    0%
+                  </strong>
+
+                  <small>
+                    placement confidence
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <span
+                class="result-status"
+                id="resultStatus"
+              >
+                Calculating
+              </span>
+
+
+              <h3 id="readinessText">
+                Readiness
+              </h3>
+
+
+              <p id="resultSummary">
+                Your result will appear here.
+              </p>
+
+            </div>
+
+
+
+            <!-- PROFILE ANALYSIS -->
+
+            <div class="insight-card">
+
+              <div class="insight-title">
+
+                <span>
+                  01
+                </span>
+
+                <div>
+
+                  <b>
+                    Profile analysis
+                  </b>
+
+                  <small>
+                    Your current profile
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <!-- STRENGTHS -->
+
+              <div class="result-block">
+
+                <small>
+                  Strengths
+                </small>
+
+                <div
+                  id="strengths"
+                  class="tag-row"
+                ></div>
+
+              </div>
+
+
+
+              <!-- FOCUS AREAS -->
+
+              <div class="result-block">
+
+                <small>
+                  Focus areas
+                </small>
+
+                <div
+                  id="weaknesses"
+                  class="tag-row"
+                ></div>
+
+              </div>
+
+
+
+              <!-- SCORE BARS -->
+
+              <div
+                class="score-bars"
+                id="scoreBars"
+              ></div>
+
+            </div>
+
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <div class="recommendation-card">
+
+              <div class="insight-title">
+
+                <span>
+                  02
+                </span>
+
+                <div>
+
+                  <b>
+                    Your next moves
+                  </b>
+
+                  <small>
+                    Personalized recommendations
+                  </small>
+
+                </div>
+
+              </div>
+
+
+              <div
+                id="recommendations"
+                class="recommendations"
+              ></div>
+
+            </div>
+
+
+          </div>
+
+        </aside>
+
+
+      </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script
+    src="{{ url_for('static', filename='app.js') }}"
+  ></script>
+
+</body>
+
+</html>
